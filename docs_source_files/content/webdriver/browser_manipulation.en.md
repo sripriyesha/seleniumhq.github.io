@@ -227,6 +227,7 @@ wait.until(titleIs("Selenium documentation"));
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
 
 # Start the driver
 with webdriver.Firefox() as driver:
@@ -695,6 +696,7 @@ driver.findElement(By.tagName("button")).click();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 # Store iframe web element
+from selenium.webdriver.common.by import By
 iframe = driver.find_element(By.CSS_SELECTOR, "#modal > iframe")
 
 # switch to selected iframe
@@ -762,6 +764,8 @@ driver.switchTo().frame("myframe");
 driver.findElement(By.tagName("button")).click();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
+from selenium.webdriver.common.by import By
+
 # Switch frame by id
 driver.switch_to.frame('buttonframe')
 
